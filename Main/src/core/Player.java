@@ -1,15 +1,19 @@
 package core;
 
+import db.DBPlayerContainer;
 import evt.PlayerLeaveReason;
 
 import java.util.UUID;
 
 public class Player {
-    private static final UUID PUUID = UUID.randomUUID();
+    private final UUID PUUID = UUID.randomUUID();
     private World world = null;
     private long millisIdle = 0;
+    DBPlayerContainer playerContainer =  DBPlayerContainer.getInstance();
 
-    public Player() { }
+    public Player() {
+        playerContainer.setID(PUUID);
+    }
 
     public Player(World w) {
         world = w;

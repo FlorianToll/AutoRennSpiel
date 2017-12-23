@@ -7,7 +7,7 @@ public class Database {
     private Statement statement = null;
     private PreparedStatement preparedStatement = null;
     private ResultSet resultSet = null;
-    private DBPlayer gameContainer = DBPlayer.getInstance();
+    DBPlayerContainer gameContainer = DBPlayerContainer.getInstance();
 
     public Database() throws ClassNotFoundException, SQLException {
         Class.forName("com.mysql.jdbc.Driver");
