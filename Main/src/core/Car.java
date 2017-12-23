@@ -1,11 +1,11 @@
 package core;
 
-public class Auto {
+public class Car {
     private Player player;
     private World world;
 
-    public Auto() { }
-    public Auto(World w) {
+    public Car() { }
+    public Car(World w) {
         world = w;
     }
 
