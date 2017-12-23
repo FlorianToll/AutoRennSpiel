@@ -4,9 +4,9 @@ import core.Player;
 import java.time.Instant;
 
 public class PlayerLeaveEvent {
-    private Player player;
-    private Instant time;
-    private PlayerLeaveReason reason;
+    private final Player player;
+    private final Instant time;
+    private final PlayerLeaveReason reason;
 
     public PlayerLeaveEvent(Player p, PlayerLeaveReason r) {
         player = p;

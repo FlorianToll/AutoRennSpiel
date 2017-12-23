@@ -27,9 +27,9 @@ public class Database {
                 double winRatio = resultSet.getDouble("winRatio");
                 if (order == 1) {
                     // gameContainer.player1 = new Player(id, user, gameScore, gameWin, gamesPlayed, winRatio);     Spielerdaten werden geladen todo: nur ein Spieler nötig = einer Pro pc
-                }else if (order == 2) {
+                } else if (order == 2) {
                     // gameContainer.player2 = new Player(id, user, gameScore, gameWin, gamesPlayed, winRatio);
-                }else {
+                } else {
                     // error
                 }
             }
@@ -65,8 +65,6 @@ public class Database {
         } catch (Exception e) {
             throw e;
         }
-
-
     }
 
     /**

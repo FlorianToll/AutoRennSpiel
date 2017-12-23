@@ -5,8 +5,8 @@ import core.Player;
 import java.time.Instant;
 
 public class PlayerJoinEvent {
-    private Player player;
-    private Instant time;
+    private final Player player;
+    private final Instant time;
 
     public PlayerJoinEvent(Player p) {
         player = p;
