@@ -18,6 +18,10 @@ public class Auto {
         return player;
     }
 
+    public void removePlayer() {
+        player = null;
+    }
+
     public World getWorld() {
         return world;
     }

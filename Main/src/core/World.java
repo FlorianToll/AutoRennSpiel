@@ -25,6 +25,8 @@ public class World {
                 for (Player player : players) {
                     if (player.getMillisIdle() >= playerTimeoutLimit.toMillis()) {
                         kickPlayer(player, PlayerLeaveReason.KICKED_BY_CONSOLE);
+                        if (listener != null)
+                            listener.onPlayerLeave(new PlayerLeaveEvent(player, PlayerLeaveReason.KICKED_BY_CONSOLE));
                     } else {
                         player.idlePlus(10);
                     }

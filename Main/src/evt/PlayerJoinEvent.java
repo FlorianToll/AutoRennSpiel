@@ -16,4 +16,8 @@ public class PlayerJoinEvent {
     public Player getPlayer() {
         return player;
     }
+
+    public Instant getTime() {
+        return time;
+    }
 }
