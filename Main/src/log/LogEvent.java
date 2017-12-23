@@ -1,18 +1,22 @@
 package log;
 
+import java.time.Instant;
 import java.util.Arrays;
 import java.util.Collection;
 
 public class LogEvent {
-    private String content = null;
-    private Collection<String> contents = null;
+    protected String content = null;
+    protected Collection<String> contents = null;
+    protected Instant time;
 
     public LogEvent(String content) {
         this.content = content;
+        time = Instant.now();
     }
 
     public LogEvent(Collection<String> contents) {
         this.contents = contents;
+        time = Instant.now();
     }
 
     public Collection<String> getContent() {
@@ -20,5 +24,9 @@ public class LogEvent {
             return contents;
         else
             return Arrays.asList(content);
+    }
+
+    public Instant getTime() {
+        return time;
     }
 }

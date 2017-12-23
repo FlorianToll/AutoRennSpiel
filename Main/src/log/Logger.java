@@ -4,8 +4,8 @@ import java.util.ArrayList;
 import java.util.Collection;
 
 public class Logger {
-    private ArrayList<String> logs = new ArrayList<>();
-    private LogListener listener;
+    protected ArrayList<String> logs = new ArrayList<>();
+    protected LogListener listener;
 
     public Logger() { }
 
